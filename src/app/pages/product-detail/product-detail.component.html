@@ -1,0 +1,48 @@
+<div class="product-detail-page container mx-auto p-4">
+    <div class="flex flex-col md:flex-row gap-8">
+      
+      <!-- Product Image Section -->
+      <div class="flex-1">
+        <img
+          src="https://images.bewakoof.com/t640/men-s-black-crest-mark-graphic-printed-oversized-acid-wash-t-shirt-625622-1717578949-1.jpg"
+          alt="Product Image"
+          class="w-1/2 h-auto rounded-lg shadow-lg"
+        />
+      </div>
+  
+      <!-- Product Details Section -->
+      <div class="flex-1">
+        <h1 class="text-3xl font-bold text-gray-900 mb-4">{{productDetail?.product_name}}</h1>
+        <p class="text-lg text-gray-600 mb-6">{{productDetail?.product_description}}</p>
+        
+        <!-- Price -->
+        <p class="text-xl font-semibold text-green-600 mb-6">{{productDetail?.product_price}}</p>
+  
+        <!-- Quantity Selector -->
+        <div class="flex items-center gap-4 mb-6">
+          <label for="quantity" class="text-gray-700">Quantity:</label>
+          <input type="number" id="quantity" min="1" max="10" value="1" class="w-16 px-2 py-1 border border-gray-300 rounded-md">
+        </div>
+  
+        <!-- Action Buttons -->
+        <div class="flex gap-4">
+          <button class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition">Add to Cart</button>
+          <button class="bg-gray-300 text-gray-800 px-6 py-2 rounded-md hover:bg-gray-400 transition">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Optional: Product Reviews Section -->
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Customer Reviews</h2>
+      <div class="space-y-4">
+        <div class="border-b pb-4">
+          <h3 class="font-semibold">John Doe</h3>
+          <p class="text-gray-600">Great product! Fits perfectly and the material is excellent.</p>
+          <p class="text-gray-500 text-sm">Rating: ★★★★☆</p>
+        </div>
+        <!-- Add more reviews here -->
+      </div>
+    </div>
+  </div>
+  

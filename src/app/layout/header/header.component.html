@@ -1,0 +1,41 @@
+<div class="flex justify-between items-center p-4 bg-black text-white px-10">
+    <!-- Logo Section -->
+    <h1 class="text-lg font-bold">Logo</h1>
+  
+    <!-- Links Section -->
+    <div class="relative">
+      <ul class="flex justify-center items-center gap-5 relative">
+        <li
+          *ngFor="let value of header"
+          class="cursor-pointer group hover:bg-slate-400 rounded-md px-2"
+        >
+          {{ value?.category_name }}
+  
+          <!-- Subcategories Dropdown -->
+          <ng-container *ngIf="value.subcategories.length > 0">
+            <ul
+              class="hidden group-hover:block absolute bg-black p-4 gap-2 justify-start items-center flex-col"
+            >
+              <li
+                *ngFor="let subcategory of value.subcategories"
+                class="hover:bg-slate-400 cursor-pointer p-2 rounded-md"
+                [routerLink]="['/product', subcategory?.subcategory_id]"
+
+              >
+                {{ subcategory?.subcategory_name }}
+              </li>
+            </ul>
+          </ng-container>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Search Input -->
+    <input
+      type="text"
+      placeholder="Search"
+      name="search"
+      class="p-2 rounded-md text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400"
+    />
+  </div>
+  
